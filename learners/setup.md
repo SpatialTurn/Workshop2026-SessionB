@@ -117,4 +117,4 @@ Use this option if you prefer working offline or need a persistent local environ
 
 ---
 
-### You're all set! Proceed to **[Python Notebook Introduction](https://spatialturn.github.io/IGIC2026/prelunch.html)** to start coding in Python. 
+### You're all set! Proceed to **[Python Notebook Introduction](https://spatialturn.github.io/Workshop2026-SessionB/prelunch.html)** to start coding in Python. 
