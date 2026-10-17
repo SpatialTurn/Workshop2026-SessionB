@@ -68,7 +68,7 @@ The hands-on work for this section:
 - **Part 3: Data Cleaning** - null value removal, shapefile join, county ranking, summary statistics
 - **Part 4: Visual Maps** - Bar charts, histogram, choropleth maps, and result interpretation
 
-### <a href="https://colab.research.google.com/github/SpatialTurn/IGIC2026/blob/main/episodes/CensusDATA_Introduction.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
+### <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/CensusDATA_Introduction.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -269,7 +269,7 @@ this average
 
 :::::::::::::::::::::::: solution
 
-See the Solution to this Problem <a href="https://colab.research.google.com/github/SpatialTurn/IGIC2026/blob/main/episodes/Question2_AnswerKey.ipynb" target="_blank">Here.</a>
+See the Solution to this Problem <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/Question2_AnswerKey.ipynb" target="_blank">Here.</a>
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::

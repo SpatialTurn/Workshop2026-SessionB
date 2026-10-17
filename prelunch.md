@@ -126,7 +126,7 @@ Scroll down to find additional reading on python libraries and most commonly use
 
 **Already comfortable with the basics?** Jump straight to cell `13` to explore NumPy, pandas, Matplotlib, and GeoPandas in action. 
 
-### <a href="https://colab.research.google.com/github/SpatialTurn/IGIC2026/blob/main/episodes/intro_python.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
+### <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/intro_python.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -157,7 +157,7 @@ visualize it using a map where the population is represented by symbol size.
 
 :::::::::::::::::::::::: solution
 
-See the Solution to this Problem <a href="https://colab.research.google.com/github/SpatialTurn/IGIC2026/blob/main/episodes/Question1_AnswerKey.ipynb" target="_blank">Here.</a>
+See the Solution to this Problem <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/Question1_AnswerKey.ipynb" target="_blank">Here.</a>
 
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
