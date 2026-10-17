@@ -173,16 +173,16 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 ```
-The `as` keyword gives the library a shorter nickname — these aliases (`pd`, `np`, `plt`) are standard conventions you will see everywhere in data science code.
+The `as` keyword gives the library a shorter nickname: these aliases (`pd`, `np`, `plt`) are standard conventions you will see everywhere in data science code.
 
 ### Why Libraries Matter ?
 
-Python on its own is a general-purpose language. Its real strength in data science comes from its ecosystem of libraries. A task that might take hundreds of lines of custom code — such as reading a CSV, computing statistics, and drawing a chart — can be done in fewer than ten lines when you use the right libraries.
+Python on its own is a general-purpose language. Its real strength in data science comes from its ecosystem of libraries. A task that might take hundreds of lines of custom code (such as reading a CSV, computing statistics, and drawing a chart) can be done in fewer than ten lines when you use the right libraries.
 
 
 ## 5. Core Data Science Libraries
 
-### NumPy — Numerical Python
+### NumPy: Numerical Python
 
 NumPy is the foundation of almost every data science library in Python. It introduces the array, a fast and memory-efficient container for numerical data.
 
@@ -197,9 +197,9 @@ print(arr * 2)      # [2, 4, 6, 8, 10]
 **Best for:** fast math on arrays and matrices, random number generation, linear algebra.
 
 
-### pandas — Data Manipulation
+### pandas: Data Manipulation
 
-pandas is the go-to library for working with tabular data — think spreadsheets or CSV files, but inside Python. Its central object is the DataFrame.
+pandas is the go-to library for working with tabular data: think spreadsheets or CSV files, but inside Python. Its central object is the DataFrame.
 
 ```python
 import pandas as pd
@@ -213,7 +213,7 @@ df["GPA"].mean()    # average of one column
 **Best for:** loading, cleaning, filtering, grouping, and summarizing data.
 
 
-### Matplotlib — Visualization
+### Matplotlib: Visualization
 
 Matplotlib is Python's core plotting library. The `pyplot` module gives you a simple interface to create charts with just a few lines.
 
@@ -227,7 +227,7 @@ plt.show()
 ```
 **Best for:** bar charts, line plots, scatter plots, histograms, and fine-grained control over figure appearance.
 
-### GeoPandas — Geographic Data
+### GeoPandas: Geographic Data
 
 GeoPandas extends pandas to support **spatial (geographic) data**. It lets you load, filter, and map geographic datasets using the exact same workflow you already know from pandas.
 

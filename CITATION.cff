@@ -1,11 +1,5 @@
-# This template CITATION.cff file was generated with cffinit.
-# Visit https://bit.ly/cffinit to replace its contents
-# with information about your lesson.
-# Remember to update this file periodically, 
-# ensuring that the author list and other fields remain accurate.
-
 cff-version: 1.2.0
-title: FIXME
+title: "Geospatial Python"
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +7,38 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Ian
+    family-names: Lindsay
+    affiliation: "Purdue University"
+  - given-names: Nicole
+    family-names: Kong
+    affiliation: "Purdue University"
+  - given-names: Innocensia
+    family-names: Owuor
+    affiliation: "Purdue University"
+  - given-names: Max
+    family-names: Gosch
+    affiliation: "Department of Anthropology, Purdue University"
+  - given-names: Aniket Dev
+    family-names: Roy
+    affiliation: "Purdue University Libraries and School of Information"
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  Hands-on spatial analysis with Python in Jupyter notebooks (Google Colab),
+  using U.S. Census data as a case study: Python basics, getting ACS data
+  through the Census API, cleaning it with pandas, and mapping it with
+  GeoPandas. This module was taught as part of the Purdue-NSF GIS
+  Cybertraining for the Social Sciences Workshop, a two-day workshop held at
+  Purdue University in 2026, to GIS professionals and instructors (Day 1,
+  Session B Python track).
+keywords:
+  - Python
+  - Jupyter
+  - Google Colab
+  - Census API
+  - American Community Survey
+  - pandas
+  - GeoPandas
+repository-code: "https://github.com/SpatialTurn/IGIC2026"
+url: "https://spatialturn.github.io/IGIC2026/"
 license: CC-BY-4.0
+date-released: "2026-05-10"
