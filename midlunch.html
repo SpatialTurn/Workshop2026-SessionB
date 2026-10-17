@@ -317,9 +317,9 @@
       </div>
     </nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Acquiring and Exploration of Census Data</h1>
-        <p>Last updated on 2026-05-12 |
+        <p>Last updated on 2026-10-17 |
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/midlunch.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+        <a href="https://github.com/SpatialTurn/IGIC2026/edit/main/episodes/midlunch.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
 
 
@@ -375,8 +375,8 @@ is the Census Bureau’s primary geospatial data product. TIGER/Line
 shapefiles are available from 2007 to the present; earlier data is
 available in ASCII format.</p>
 <p>These shapefiles include all legal boundaries and names for
-geographic units across the United States — <em>states, counties,
-places, ZIP codes, urban areas, census blocks, block groups, and census
+geographic units across the United States: <em>states, counties, places,
+ZIP codes, urban areas, census blocks, block groups, and census
 tracts</em>.</p>
 <p>Each record includes a standard <code>GEOID</code> that links
 directly to Census demographic data.</p>
@@ -402,7 +402,7 @@ complete population data with the smallest margin of error.</p>
 <strong>Population:</strong> sex, age, race, Hispanic origin, and
 household composition</li>
 <li>
-<strong>Housing:</strong> occupancy, vacancy status, and tenure —
+<strong>Housing:</strong> occupancy, vacancy status, and tenure:
 available at all geographic levels, including the highest resolution
 (census blocks)</li>
 </ul></div>
@@ -417,10 +417,10 @@ margin of error than Decennial Census counts.</p>
 <div class="section level4">
 <h4 id="the-acs-is-published-in-two-forms">The ACS is published in two forms:<a class="anchor" aria-label="anchor" href="#the-acs-is-published-in-two-forms"></a></h4>
 <ul><li>
-<strong>1-year estimates</strong> — based on 12 months of data;
+<strong>1-year estimates</strong>: based on 12 months of data;
 available for areas with populations of 65,000+</li>
 <li>
-<strong>5-year estimates</strong> — based on 60 months of data;
+<strong>5-year estimates</strong>: based on 60 months of data;
 available for all geographies, including small areas</li>
 </ul></div>
 <div class="section level4">
@@ -472,7 +472,7 @@ Census Bureau provides several access methods:</p>
 <li>Programmatic access via the Census API</li>
 </ul><p>This lesson focuses on <strong>API-based access</strong>, which lets
 you retrieve demographic and socioeconomic data directly into Python
-workflows — without clicking through a web interface.</p>
+workflows, without clicking through a web interface.</p>
 <div class="section level3">
 <h3 id="what-is-a-census-api-call">What Is a Census API Call?<a class="anchor" aria-label="anchor" href="#what-is-a-census-api-call"></a></h3>
 <p>An API (Application Programming Interface) lets computers request
@@ -542,7 +542,7 @@ Keep it open as we will use it for the next part of the workshop.<a class="ancho
 <hr></div>
 </section><section><h2 class="section-heading" id="tutorial-accessing-acs-data-via-the-census-api">Tutorial: Accessing ACS Data via the Census API<a class="anchor" aria-label="anchor" href="#tutorial-accessing-acs-data-via-the-census-api"></a></h2>
 <hr class="half-width"><div class="section level3">
-<h3 id="step-1-explore-the-census-api">Step 1 — Explore the Census API<a class="anchor" aria-label="anchor" href="#step-1-explore-the-census-api"></a></h3>
+<h3 id="step-1-explore-the-census-api">Step 1: Explore the Census API<a class="anchor" aria-label="anchor" href="#step-1-explore-the-census-api"></a></h3>
 <ol style="list-style-type: decimal"><li>Go to the <a href="https://www.census.gov/data/developers.html" class="external-link">Census Developers
 Page</a>.</li>
 <li>Click <strong>Available APIs</strong> (left of the search bar).</li>
@@ -550,16 +550,16 @@ Page</a>.</li>
 (ACS)</strong>.</li>
 <li>The ACS offers <strong>1-year</strong> and <strong>5-year</strong>
 estimates. We will use the <strong>2023 ACS 5-Year</strong>, which
-covers data from 2019–2023.</li>
+covers data from 2019 to 2023.</li>
 <li>Scroll to <strong>Data Profiles</strong> and review the “Example
-Call” links — these are the base API URLs you’ll use in Python or a
+Call” links: these are the base API URLs you’ll use in Python or a
 browser.</li>
 <li>Under <strong>Data Profiles</strong>, click the <code>html</code>
 link next to <strong>2023 ACS Comparison Profiles Variables</strong> to
 browse all available variable codes.</li>
 </ol><hr></div>
 <div class="section level3">
-<h3 id="step-2-understand-api-links-for-geographic-levels">Step 2 — Understand API Links for Geographic Levels<a class="anchor" aria-label="anchor" href="#step-2-understand-api-links-for-geographic-levels"></a></h3>
+<h3 id="step-2-understand-api-links-for-geographic-levels">Step 2: Understand API Links for Geographic Levels<a class="anchor" aria-label="anchor" href="#step-2-understand-api-links-for-geographic-levels"></a></h3>
 <p>The ACS API uses different URL patterns depending on the geographic
 level you want:</p>
 <ul><li>Country</li>
@@ -584,13 +584,13 @@ state</li>
 Codes List</a>)</li>
 <li>
 <code>state:*</code> is <strong>not</strong> allowed for tract-level
-queries due to dataset size limits — you must specify a state</li>
+queries due to dataset size limits: you must specify a state</li>
 </ul></div>
 </div>
 </div>
 <hr></div>
 <div class="section level3">
-<h3 id="step-3-add-variables-to-your-request">Step 3 — Add Variables to Your Request<a class="anchor" aria-label="anchor" href="#step-3-add-variables-to-your-request"></a></h3>
+<h3 id="step-3-add-variables-to-your-request">Step 3: Add Variables to Your Request<a class="anchor" aria-label="anchor" href="#step-3-add-variables-to-your-request"></a></h3>
 <ol style="list-style-type: decimal"><li><p>On the variables page from Step 1, press <strong>Ctrl+F</strong>
 and search for your variable of interest.<br>
 Example: searching “no vehicles available” returns variable
@@ -609,7 +609,7 @@ Example: searching “no vehicles available” returns variable
 <li><p>Make sure to add the <code>GEO_ID</code> column as well.</p></li>
 </ol><hr></div>
 <div class="section level3">
-<h3 id="step-4-optional-enhancements">Step 4 — Optional Enhancements<a class="anchor" aria-label="anchor" href="#step-4-optional-enhancements"></a></h3>
+<h3 id="step-4-optional-enhancements">Step 4: Optional Enhancements<a class="anchor" aria-label="anchor" href="#step-4-optional-enhancements"></a></h3>
 <ul><li>
 <strong>View variable descriptions:</strong> Add
 <code>&amp;descriptive=true</code> to your URL</li>
@@ -624,7 +624,7 @@ Example: searching “no vehicles available” returns variable
 <div class="callout-inner">
 <div class="callout-content">
 <p><strong>Heads up:</strong> API variable names are
-<strong>case-sensitive</strong> — they must match exactly as listed in
+<strong>case-sensitive</strong>: they must match exactly as listed in
 the variables page.</p>
 </div>
 </div>
@@ -659,9 +659,9 @@ Excel or import into Python</li>
 </div>
 </div>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 </div>
 </div>
 </section></div> <!-- / div.lesson-content -->
@@ -688,14 +688,14 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/episodes/midlunch.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/IGIC2026/edit/main/episodes/midlunch.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/IGIC2026/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/IGIC2026/" class="external-link">Source</a></p>
         <p>
         <a href="citation.html">Cite</a>
-        | <a href="mailto:iowuor@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -714,18 +714,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/midlunch.html",
+  "@id": "https://SpatialTurn.github.io/IGIC2026/midlunch.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "python, jupyter, census, notebooks, markdown",
+  "keywords": "Python, Jupyter, Google Colab, Census API, American Community Survey, pandas, GeoPandas",
   "name": "Acquiring and Exploration of Census Data",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/midlunch.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/midlunch.html",
+  "url": "https://SpatialTurn.github.io/IGIC2026/midlunch.html",
+  "identifier": "https://SpatialTurn.github.io/IGIC2026/midlunch.html",
   "dateCreated": "2026-05-10",
-  "dateModified": "2026-05-12",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>

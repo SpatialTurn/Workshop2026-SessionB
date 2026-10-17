@@ -298,12 +298,22 @@
     </nav><main id="main-content" class="main-content"><h1 class="schedule-heading">Summary and Schedule</h1>
       
 
-<p>This is a new lesson built with <a href="https://carpentries.github.io/sandpaper-docs" class="external-link">The Carpentries
-Workbench</a>.</p>
+<p>Hands-on spatial analysis with Python in Jupyter notebooks (Google
+Colab), using U.S. Census data as a case study: Python basics, getting
+ACS data through the Census API, cleaning it with pandas, and mapping it
+with GeoPandas.</p>
+<p>This module was taught as part of the Purdue-NSF GIS Cybertraining
+for the Social Sciences Workshop, a two-day workshop held at Purdue
+University in 2026 (Day 1, Session B Python track). See the <a href="https://spatialturn.github.io/workshop2026.html" class="external-link">Workshop 2026
+page</a> for the full program.</p>
+<p>It is part of <a href="https://spatialturn.github.io/" class="external-link">Enabling the
+Geospatial Turn in the Social Sciences</a>, a set of training modules
+developed at Purdue University with support from the National Science
+Foundation.</p>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 
 
       <section id="schedule"><table class="table table schedule table-striped" role="presentation"><tbody><tr><td></td><td><a href="#setup">Setup Instructions</a></td><td> Download files required for the lesson</td>
@@ -352,9 +362,9 @@ Finish
 <td>
 </td>
 </tr><!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- --></tbody></table><p>
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+--></tbody></table><p>
       The actual schedule may vary slightly depending on the topics and exercises chosen by the instructor.
       </p>
       </section><section id="setup"><section><h2 class="section-heading" id="workshop-overview">Workshop Overview<a class="anchor" aria-label="anchor" href="#workshop-overview"></a></h2>
@@ -364,7 +374,7 @@ will learn how to access, clean, analyze, and visualize data while
 understanding key Census concepts such as variables and geographic
 units.</p>
 <p>Designed for beginners, the session emphasizes hands-on learning and
-guides participants through a complete workflow — from data acquisition
+guides participants through a complete workflow, from data acquisition
 to interpretation. <strong>Basic Python experience is
 required.</strong></p>
 <hr></section><section><h2 class="section-heading" id="schedule">Schedule<a class="anchor" aria-label="anchor" href="#schedule"></a></h2>
@@ -372,48 +382,48 @@ required.</strong></p>
 <th>Session</th>
 <th>Content</th>
 <th>Activities</th>
-</tr></thead><tbody><tr><td>8:30 – 10:30</td>
+</tr></thead><tbody><tr><td>8:30 to 10:30</td>
 <td><em>Breakfast Introductions</em></td>
-<td>—</td>
-<td>—</td>
-</tr><tr><td>10:30 – 12:30</td>
+<td>-</td>
+<td>-</td>
+</tr><tr><td>10:30 to 12:30</td>
 <td>Notebook Basics</td>
 <td>Introduction to Jupyter Notebook and Google Colab</td>
 <td>Open notebook, run first code cell, create markdown notes. Use
 libraries, create variables, load sample data, include short exercise on
 how to play with data</td>
-</tr><tr><td>12:30 – 1:15</td>
+</tr><tr><td>12:30 to 1:15</td>
 <td><em>Lunch Break</em></td>
-<td>—</td>
-<td>—</td>
-</tr><tr><td>1:15 – 2:45</td>
+<td>-</td>
+<td>-</td>
+</tr><tr><td>1:15 to 2:45</td>
 <td>Python Libraries</td>
 <td>Data Cleaning, ACS vs. Decennial Census; Modes of accessing
 data</td>
 <td>Retrieve data, convert to DataFrame, Explore dataset structure,
 variables, tables, columns, and geographical units</td>
-</tr><tr><td>2:45 – 3:00</td>
+</tr><tr><td>2:45 to 3:00</td>
 <td><em>Coffee Break</em></td>
-<td>—</td>
-<td>—</td>
-</tr><tr><td>3:00 – 4:30</td>
+<td>-</td>
+<td>-</td>
+</tr><tr><td>3:00 to 4:30</td>
 <td>Analyzing Census Data</td>
 <td>Creating charts /maps of populations trends</td>
 <td>Maps/Charts of population distribution, interpreting results</td>
-</tr><tr><td>4:30 – 5:00</td>
+</tr><tr><td>4:30 to 5:00</td>
 <td><em>Group Discussion</em></td>
-<td>—</td>
-<td>—</td>
+<td>-</td>
+<td>-</td>
 </tr></tbody></table><hr></section><section><h2 class="section-heading" id="setup-requirements">Setup Requirements<a class="anchor" aria-label="anchor" href="#setup-requirements"></a></h2>
 <hr class="half-width"><p>We offer <strong>two setup paths</strong>:</p>
 <ol style="list-style-type: decimal"><li>
-<strong>Google Colab</strong> — recommended for beginners; no
+<strong>Google Colab</strong>: recommended for beginners; no
 installation needed</li>
 <li>
-<strong>Local installation</strong> with Anaconda Navigator — for
+<strong>Local installation</strong> with Anaconda Navigator: for
 offline work and full control</li>
 </ol><hr><div class="section level3">
-<h3 id="option-1-google-colab-zero-installation-recommended">Option 1: Google Colab (Zero Installation – Recommended)<a class="anchor" aria-label="anchor" href="#option-1-google-colab-zero-installation-recommended"></a></h3>
+<h3 id="option-1-google-colab-zero-installation-recommended">Option 1: Google Colab (Zero Installation, Recommended)<a class="anchor" aria-label="anchor" href="#option-1-google-colab-zero-installation-recommended"></a></h3>
 <p>Google Colab is a free, cloud-based Jupyter notebook environment
 hosted by Google. It runs entirely in your browser, requires only a
 Google account, and comes with pandas, matplotlib, seaborn, and many
@@ -427,7 +437,7 @@ other data science libraries <strong>pre-installed</strong>.</p>
 notebook</strong>).</li>
 <li>
 <em>(Optional)</em> Rename it: <strong>File → Rename</strong> (e.g.,
-<code>Test_Notebook – YourName</code>).</li>
+<code>Test_Notebook_YourName</code>).</li>
 <li>Test the libraries by running this in the first cell
 (<code>Shift+Enter</code> to execute):</li>
 </ol><div class="codewrapper sourceCode" id="cb1">
@@ -517,9 +527,9 @@ cell</td>
 <h3 id="youre-all-set-proceed-to-python-notebook-introduction-to-start-coding-in-python-">You’re all set! Proceed to <strong><a href="https://spatialturn.github.io/IGIC2026/prelunch.html" class="external-link">Python
 Notebook Introduction</a></strong> to start coding in Python.<a class="anchor" aria-label="anchor" href="#youre-all-set-proceed-to-python-notebook-introduction-to-start-coding-in-python-"></a></h3>
 <!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
+Links listed here can be reused across pages as [text][name].
+Add reference-style links below as needed.
+-->
 </div>
 </section></section></main><nav class="bottom-pagination mx-md-4" aria-label="Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link float-end" href="../instructor/prelunch.html" rel="next">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -536,14 +546,14 @@ any links that you are not going to use.
         <p>This lesson is subject to the <a href="CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         <p>
 
-        <a href="https://github.com/carpentries/workbench-template-md/edit/main/index.md" class="external-link">Edit on GitHub</a>
+        <a href="https://github.com/SpatialTurn/IGIC2026/edit/main/index.md" class="external-link">Edit on GitHub</a>
 
 	
-        | <a href="https://github.com/carpentries/workbench-template-md/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
-        | <a href="https://github.com/carpentries/workbench-template-md/" class="external-link">Source</a></p>
+        | <a href="https://github.com/SpatialTurn/IGIC2026/blob/main/CONTRIBUTING.md" class="external-link">Contributing</a>
+        | <a href="https://github.com/SpatialTurn/IGIC2026/" class="external-link">Source</a></p>
         <p>
         <a href="../citation.html">Cite</a>
-        | <a href="mailto:iowuor@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
+        | <a href="mailto:ilindsay@purdue.edu">Contact</a> | <a href="https://carpentries.org/about/" class="external-link">About</a></p>
 		</div>
 		<div class="col-md-6">
 
@@ -562,18 +572,18 @@ any links that you are not going to use.
     {
   "@context": "https://schema.org",
   "@type": "LearningResource",
-  "@id": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
+  "@id": "https://SpatialTurn.github.io/IGIC2026/instructor/index.html",
   "inLanguage": "en",
   "dct:conformsTo": "https://bioschemas.org/profiles/LearningResource/1.0-RELEASE",
   "description": "A Carpentries Lesson teaching foundational data and coding skills to researchers worldwide",
-  "keywords": "python, jupyter, census, notebooks, markdown",
+  "keywords": "Python, Jupyter, Google Colab, Census API, American Community Survey, pandas, GeoPandas",
   "name": "Geospatial Python",
   "creativeWorkStatus": "active",
-  "url": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
-  "identifier": "https://carpentries.github.io/workbench-template-md/instructor/index.html",
+  "url": "https://SpatialTurn.github.io/IGIC2026/instructor/index.html",
+  "identifier": "https://SpatialTurn.github.io/IGIC2026/instructor/index.html",
   "dateCreated": "2026-05-10",
-  "dateModified": "2026-10-13",
-  "datePublished": "2026-10-13"
+  "dateModified": "2026-10-17",
+  "datePublished": "2026-10-17"
 }
 
   </script><script>
