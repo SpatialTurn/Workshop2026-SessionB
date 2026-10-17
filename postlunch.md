@@ -29,7 +29,7 @@ exercises: 120 # exercise time in minutes
 
 ## Importance of Data Cleaning 
 
-Real-world data is messy. Before any analysis or visualization can happen, the data needs to be trustworthy — and that requires cleaning.
+Real-world data is messy. Before any analysis or visualization can happen, the data needs to be trustworthy, and that requires cleaning.
 
 For Census data specifically, three problems show up almost every time:
 
@@ -39,7 +39,7 @@ For Census data specifically, three problems show up almost every time:
 
 ::::::::::::::::::::::::::::::::::::: callout
  
-Data scientists typically spend **60–80% of project time** on data preparation — not analysis. The good news: for Census data, the cleaning steps are predictable and learnable.
+Data scientists typically spend **60 to 80% of project time** on data preparation, not analysis. The good news: for Census data, the cleaning steps are predictable and learnable.
  
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -51,7 +51,7 @@ After downloading ACS data via the Census API (see the previous lesson), the raw
  
 Jump to **Part 3** of the notebook. The data was downloaded as a CSV from the Census API and loaded into a pandas DataFrame. At this stage it has some rough edges:
 
-- Every column is stored as a **string** — even numeric estimates like population counts
+- Every column is stored as a **string**, even numeric estimates like population counts
 - Missing or suppressed values such as `NaN`
 - Column names are raw variable codes like `DP04_0058E`, which are hard to read (optional)
 - The dataset may have rows that should be excluded from analysis
@@ -73,7 +73,7 @@ The hands-on work for this section:
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-### Step 1 — Cast Estimate Columns to Numbers
+### Step 1: Cast Estimate Columns to Numbers
  
 The Census API returns all values as strings. Before doing any math, convert estimate columns (those ending in `E`) to numeric:
  
@@ -87,7 +87,7 @@ for col in estimate_cols:
 `errors="coerce"` turns anything that cannot be parsed (e.g., `"N"` for not applicable) into `NaN` automatically.
 
 
-### Step 2 — Rename Columns to Human-Readable Labels
+### Step 2: Rename Columns to Human-Readable Labels
  
 Raw ACS codes are hard to work with. Create a rename dictionary for the variables you downloaded:
  
@@ -115,24 +115,24 @@ variable_reference = {
  
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-### Step 3 — Drop or Flag Rows with Missing Data
+### Step 3: Drop or Flag Rows with Missing Data
  
 Decide how to handle rows where your key variable is `NaN`:
  
 ```python
 variable = "no_vehicle_households"
  
-# Option A — drop rows missing the key variable entirely
+# Option A: drop rows missing the key variable entirely
 df_clean = df.dropna(subset=[variable]).copy()
  
-# Option B — flag them for inspection instead of dropping
+# Option B: flag them for inspection instead of dropping
 df["data_missing"] = df[variable].isna()
 print(df["data_missing"].value_counts())
 ```
  
 Use Option A when you are ready to proceed to analysis. Use Option B while still exploring, so you can understand *why* values are missing (small population suppression, boundary changes, etc.).
 
-### Step 4 — Sort the Data
+### Step 4: Sort the Data
  
 Sorting makes it easy to find the highest and lowest values at a glance:
  
@@ -146,7 +146,7 @@ df_clean.sort_values(variable, ascending=False)[["NAME", "GEOID", variable]].hea
 df_clean.sort_values(variable, ascending=True)[["NAME", "GEOID", variable]].head(10)
 ```
 
-### Step 5 — Summary Statistics
+### Step 5: Summary Statistics
  
 #### Single-variable summary
  
@@ -154,7 +154,7 @@ df_clean.sort_values(variable, ascending=True)[["NAME", "GEOID", variable]].head
 print(df_clean[variable].describe().round(1))
 ```
 
-This gives you count, mean, standard deviation, min, quartiles, and max — a fast sanity check before plotting.
+This gives you count, mean, standard deviation, min, quartiles, and max: a fast sanity check before plotting.
  
 #### Grouped by county
  
@@ -193,7 +193,7 @@ display(state_summary)
 
 ::::::::::::::::::::::::::::::::::::: keypoints
  
-- Always cast Census columns to numeric before analysis — the API returns everything as strings
+- Always cast Census columns to numeric before analysis: the API returns everything as strings
 - Always check for missing data (`NaN`) to avoid visualization problems later on
 - Rename cryptic variable codes to descriptive column names early in your workflow
 - Use `groupby` with `.agg()` to compute multiple statistics at once across geographic units
@@ -206,12 +206,12 @@ display(state_summary)
  
 ### What Is Data Visualization?
  
-Data visualization is the graphical representation of information. Instead of rows of numbers, it uses charts, maps, and diagrams to make patterns, trends, and outliers immediately understandable. For Census analysis specifically, visualization is what transforms a cleaned DataFrame into insight — showing *where* car-free households cluster, *which* counties are outliers, or *how* income varies across tracts.
+Data visualization is the graphical representation of information. Instead of rows of numbers, it uses charts, maps, and diagrams to make patterns, trends, and outliers immediately understandable. For Census analysis specifically, visualization is what transforms a cleaned DataFrame into insight: showing *where* car-free households cluster, *which* counties are outliers, or *how* income varies across tracts.
  
 There are two modes you will use throughout this workshop:
  
-- **Exploratory visualization** — quick plots for *your own* understanding while cleaning and analyzing
-- **Explanatory visualization** — polished charts and maps you share with others to communicate findings
+- **Exploratory visualization**: quick plots for *your own* understanding while cleaning and analyzing
+- **Explanatory visualization**: polished charts and maps you share with others to communicate findings
 
 
 ### Why Visualization Matters for Census Data ?
@@ -237,10 +237,10 @@ Visualization is powerful, but it can mislead as easily as it informs. Keep both
  
 **Stuff to Avoid:**
 
-- **Truncated axes** — starting a bar chart's y-axis at 500 instead of 0 can make a small difference look enormous
-- **Chartjunk** — decorative elements like 3D effects, excessive gridlines, and gradient fills that add visual noise without adding information
-- **Misleading color scales** — a diverging color palette centered at the wrong value distorts spatial patterns
-- **Over-aggregation** — rolling tract-level data all the way up to state averages hides local variation
+- **Truncated axes**: starting a bar chart's y-axis at 500 instead of 0 can make a small difference look enormous
+- **Chartjunk**: decorative elements like 3D effects, excessive gridlines, and gradient fills that add visual noise without adding information
+- **Misleading color scales**: a diverging color palette centered at the wrong value distorts spatial patterns
+- **Over-aggregation**: rolling tract-level data all the way up to state averages hides local variation
 
 
 ::::::::::::::::::::::::::::::::::::: callout
@@ -253,12 +253,12 @@ Visualization is powerful, but it can mislead as easily as it informs. Keep both
  
 ###### **Foundational Rules:**
  
-1. **Choose the right chart type** — choropleth for spatial distribution, histogram for distribution shape, bar chart for ranking, scatter plot for relationships. Avoid pie charts for more than 4–5 categories.
-2. **Label everything** — title, axis labels, units, and a legend. A chart with no axis labels cannot be interpreted.
-3. **Be honest about scale** — never truncate axes without clearly disclosing it; clip outliers only after explaining why.
-4. **Use colorblind-friendly palettes** — `viridis`, `YlOrRd`, and ColorBrewer palettes are designed to be perceptually uniform and accessible. Avoid raw red/green combinations.
-5. **Remove what is not data** — maximize the ratio of information to ink. Every element should earn its place.
-6. **Add accessibility** — include alt text for published figures; use patterns in addition to color where possible.
+1. **Choose the right chart type**: choropleth for spatial distribution, histogram for distribution shape, bar chart for ranking, scatter plot for relationships. Avoid pie charts for more than 4 to 5 categories.
+2. **Label everything**: title, axis labels, units, and a legend. A chart with no axis labels cannot be interpreted.
+3. **Be honest about scale**: never truncate axes without clearly disclosing it; clip outliers only after explaining why.
+4. **Use colorblind-friendly palettes**: `viridis`, `YlOrRd`, and ColorBrewer palettes are designed to be perceptually uniform and accessible. Avoid raw red/green combinations.
+5. **Remove what is not data**: maximize the ratio of information to ink. Every element should earn its place.
+6. **Add accessibility**: include alt text for published figures; use patterns in addition to color where possible.
 
 :::::::::::::::::::::::::::::::::::: challenge
 

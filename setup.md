@@ -6,7 +6,7 @@ title: "Setup"
 
 This workshop introduces Jupyter Notebook as a platform for data analysis using U.S. Census data as a practical case study. Participants will learn how to access, clean, analyze, and visualize data while understanding key Census concepts such as variables and geographic units.
 
-Designed for beginners, the session emphasizes hands-on learning and guides participants through a complete workflow — from data acquisition to interpretation. **Basic Python experience is required.**
+Designed for beginners, the session emphasizes hands-on learning and guides participants through a complete workflow, from data acquisition to interpretation. **Basic Python experience is required.**
 
 ---
 
@@ -14,13 +14,13 @@ Designed for beginners, the session emphasizes hands-on learning and guides part
 
 | Time | Session | Content | Activities |
 |------|---------|---------|------------|
-| 8:30 – 10:30 | *Breakfast Introductions* | — | — |
-| 10:30 – 12:30 | Notebook Basics | Introduction to Jupyter Notebook and Google Colab | Open notebook, run first code cell, create markdown notes. Use libraries, create variables, load sample data, include short exercise on how to play with data |
-| 12:30 – 1:15 | *Lunch Break* | — | — |
-| 1:15 – 2:45 | Python Libraries | Data Cleaning, ACS vs. Decennial Census; Modes of accessing data | Retrieve data, convert to DataFrame, Explore dataset structure, variables, tables, columns, and geographical units |
-| 2:45 – 3:00 | *Coffee Break* | — | — |
-| 3:00 – 4:30 | Analyzing Census Data | Creating charts /maps of populations trends | Maps/Charts of population distribution, interpreting results |
-| 4:30 – 5:00 | *Group Discussion* |  — | — |
+| 8:30 to 10:30 | *Breakfast Introductions* | - | - |
+| 10:30 to 12:30 | Notebook Basics | Introduction to Jupyter Notebook and Google Colab | Open notebook, run first code cell, create markdown notes. Use libraries, create variables, load sample data, include short exercise on how to play with data |
+| 12:30 to 1:15 | *Lunch Break* | - | - |
+| 1:15 to 2:45 | Python Libraries | Data Cleaning, ACS vs. Decennial Census; Modes of accessing data | Retrieve data, convert to DataFrame, Explore dataset structure, variables, tables, columns, and geographical units |
+| 2:45 to 3:00 | *Coffee Break* | - | - |
+| 3:00 to 4:30 | Analyzing Census Data | Creating charts /maps of populations trends | Maps/Charts of population distribution, interpreting results |
+| 4:30 to 5:00 | *Group Discussion* | - | - |
 
 ---
 
@@ -28,12 +28,12 @@ Designed for beginners, the session emphasizes hands-on learning and guides part
 
 We offer **two setup paths**:
 
-1. **Google Colab** — recommended for beginners; no installation needed
-2. **Local installation** with Anaconda Navigator — for offline work and full control
+1. **Google Colab**: recommended for beginners; no installation needed
+2. **Local installation** with Anaconda Navigator: for offline work and full control
 
 ---
 
-### Option 1: Google Colab (Zero Installation – Recommended)
+### Option 1: Google Colab (Zero Installation, Recommended)
 
 Google Colab is a free, cloud-based Jupyter notebook environment hosted by Google. It runs entirely in your browser, requires only a Google account, and comes with pandas, matplotlib, seaborn, and many other data science libraries **pre-installed**.
 
@@ -42,7 +42,7 @@ Google Colab is a free, cloud-based Jupyter notebook environment hosted by Googl
 1. Go to <https://colab.research.google.com>
 2. Sign in with your Google account (or create one if needed).
 3. Click **New notebook** (or **File → New notebook**).
-4. *(Optional)* Rename it: **File → Rename** (e.g., `Test_Notebook – YourName`).
+4. *(Optional)* Rename it: **File → Rename** (e.g., `Test_Notebook_YourName`).
 5. Test the libraries by running this in the first cell (`Shift+Enter` to execute):
 
 ```python

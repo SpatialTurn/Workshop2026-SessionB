@@ -34,7 +34,7 @@ exercises: 120 # exercise time in minutes
 
 TIGER (Topologically Integrated Geographic Encoding and Referencing) is the Census Bureau's primary geospatial data product. TIGER/Line shapefiles are available from 2007 to the present; earlier data is available in ASCII format.
 
-These shapefiles include all legal boundaries and names for geographic units across the United States — *states, counties, places, ZIP codes, urban areas, census blocks, block groups, and census tracts*.
+These shapefiles include all legal boundaries and names for geographic units across the United States: *states, counties, places, ZIP codes, urban areas, census blocks, block groups, and census tracts*.
  
 Each record includes a standard `GEOID` that links directly to Census demographic data.
 
@@ -52,7 +52,7 @@ Conducted every ten years, the Decennial Census counts every person living in th
 #### Variables include:
 
 - **Population:** sex, age, race, Hispanic origin, and household composition
-- **Housing:** occupancy, vacancy status, and tenure — available at all geographic levels, including the highest resolution (census blocks)
+- **Housing:** occupancy, vacancy status, and tenure: available at all geographic levels, including the highest resolution (census blocks)
 
 ### American Community Survey (ACS)
 
@@ -60,8 +60,8 @@ The ACS is an annual survey that collects information from a sample of the popul
 
 #### The ACS is published in two forms:
 
-- **1-year estimates** — based on 12 months of data; available for areas with populations of 65,000+
-- **5-year estimates** — based on 60 months of data; available for all geographies, including small areas
+- **1-year estimates**: based on 12 months of data; available for areas with populations of 65,000+
+- **5-year estimates**: based on 60 months of data; available for all geographies, including small areas
 
 #### **Variables include** (in addition to standard demographic and housing data):
 
@@ -105,7 +105,7 @@ Before mapping or analyzing Census data, you need to obtain it. The Census Burea
 - Bulk file downloads
 - Programmatic access via the Census API
 
-This lesson focuses on **API-based access**, which lets you retrieve demographic and socioeconomic data directly into Python workflows — without clicking through a web interface.
+This lesson focuses on **API-based access**, which lets you retrieve demographic and socioeconomic data directly into Python workflows, without clicking through a web interface.
 
 ### What Is a Census API Call?
 
@@ -159,19 +159,19 @@ This part of the session covers:
 
 ## Tutorial: Accessing ACS Data via the Census API
  
-### Step 1 — Explore the Census API
+### Step 1: Explore the Census API
  
 1. Go to the [Census Developers Page](https://www.census.gov/data/developers.html).
 2. Click **Available APIs** (left of the search bar).
 3. Scroll down and select **American Community Survey (ACS)**.
-4. The ACS offers **1-year** and **5-year** estimates. We will use the **2023 ACS 5-Year**, which covers data from 2019–2023.
-5. Scroll to **Data Profiles** and review the "Example Call" links — these are the base API URLs you'll use in Python or a browser.
+4. The ACS offers **1-year** and **5-year** estimates. We will use the **2023 ACS 5-Year**, which covers data from 2019 to 2023.
+5. Scroll to **Data Profiles** and review the "Example Call" links: these are the base API URLs you'll use in Python or a browser.
 6. Under **Data Profiles**, click the `html` link next to **2023 ACS Comparison Profiles Variables** to browse all available variable codes.
 
 ---
 
  
-### Step 2 — Understand API Links for Geographic Levels
+### Step 2: Understand API Links for Geographic Levels
  
 The ACS API uses different URL patterns depending on the geographic level you want:
  
@@ -189,12 +189,12 @@ https://api.census.gov/data/2023/acs/acs5/profile?get=NAME&for=tract:*&in=state:
 - `tract:*` returns all tracts in the specified state
 - `county:*` returns all counties in the specified state
 - Replace `state:18` with your state's FIPS code ([State Codes List](https://www.census.gov/library/reference/code-lists/ansi.html#state))
-- `state:*` is **not** allowed for tract-level queries due to dataset size limits — you must specify a state
+- `state:*` is **not** allowed for tract-level queries due to dataset size limits: you must specify a state
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ---
 
-### Step 3 — Add Variables to Your Request
+### Step 3: Add Variables to Your Request
  
 1. On the variables page from Step 1, press **Ctrl+F** and search for your variable of interest.  
    Example: searching "no vehicles available" returns variable `DP04_0058E` (the estimate version).
@@ -218,7 +218,7 @@ https://api.census.gov/data/2023/acs/acs5/profile?get=NAME&for=tract:*&in=state:
 
 ---
  
-### Step 4 — Optional Enhancements
+### Step 4: Optional Enhancements
  
 - **View variable descriptions:** Add `&descriptive=true` to your URL
 - **Download as CSV:** Add `&outputFormat=csv` for a spreadsheet
@@ -226,7 +226,7 @@ https://api.census.gov/data/2023/acs/acs5/profile?get=NAME&for=tract:*&in=state:
 
 ::::::::::::::::::::::::::::::::::::: callout
  
-**Heads up:** API variable names are **case-sensitive** — they must match exactly as listed in the variables page.
+**Heads up:** API variable names are **case-sensitive**: they must match exactly as listed in the variables page.
  
 ::::::::::::::::::::::::::::::::::::::::::::::::
  
