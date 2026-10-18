@@ -1,7 +1,7 @@
 ---
-title: "Acquiring and Exploration of Census Data"
-teaching: 120 # teaching time in minutes
-exercises: 120 # exercise time in minutes
+title: "Acquiring and Exploring Census Data"
+teaching: 45 # teaching time in minutes
+exercises: 45 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
@@ -39,7 +39,7 @@ These shapefiles include all legal boundaries and names for geographic units acr
 Each record includes a standard `GEOID` that links directly to Census demographic data.
 
 
-![*U.S. Census Bureau TIGER/Line shapefile boundaries for State Regions*](censusmapusa.jpg "Census USA Map")
+![U.S. Census Bureau TIGER/Line boundaries of the states, grouped into census regions.](censusmapusa.jpg "Census USA Map")
 
 
 TIGER/Line Shapefiles use American National Standards Institute (ANSI) codes to identify geographic entities, including both FIPS (Federal Information Processing Series) and GNIS (U.S. Geological Survey Geographic Names Information System) codes. For example, the field `STATEFP` contains the state FIPS code, and `STATENS` contains the state GNIS code. County-level FIPS codes are five digits: the first two identify the state, and the last three identify the county.
@@ -144,9 +144,9 @@ Work through the interactive Python notebook linked below, which covers everythi
 
 This part of the session covers:
 
-- **Part 1: Retrieving the Dataset** - You can refer to the theory just below. 
+- **Part 1: Retrieving the Dataset**: you can refer to the theory just below. 
 
-- **Part 2: Exploring the Dataset** - Structures, variables, columns, geographical units.  
+- **Part 2: Exploring the Dataset**: structures, variables, columns, geographical units.  
 
 ### <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/CensusDATA_Introduction.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
 
@@ -239,7 +239,7 @@ https://api.census.gov/data/2023/acs/acs5/profile?get=NAME&for=tract:*&in=state:
 **Note:** Make sure to add the API key within the link. 
  
 ```
-https://api.census.gov/data/2023/acs/acs5/profile?get=NAME,GEO_ID,DP04_0058E&for=tract:*&in=state:18&in=county:*&descriptive=true&outputFormat=csv&key=""
+https://api.census.gov/data/2023/acs/acs5/profile?get=NAME,GEO_ID,DP04_0058E&for=tract:*&in=state:18&in=county:*&descriptive=true&outputFormat=csv&key=YOUR_KEY_GOES_HERE
 ```
  
 ##### This returns the number of occupied households **without a vehicle** for every census tract in Indiana.

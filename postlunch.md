@@ -1,7 +1,7 @@
 ---
-title: "Census Data Analysis with Python Notebook"
-teaching: 120 # teaching time in minutes
-exercises: 120 # exercise time in minutes
+title: "Census Data Analysis with Python"
+teaching: 45 # teaching time in minutes
+exercises: 45 # exercise time in minutes
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions
@@ -33,9 +33,9 @@ Real-world data is messy. Before any analysis or visualization can happen, the d
 
 For Census data specifically, three problems show up almost every time:
 
-- **Hidden missing values** - `NaN` means "no data" or null value. Left uncaught, it silently disrupts visualization
-- **Wrong data types** -  the Census API returns everything as strings. Math on strings fails in Python
-- **Unreadable column names** - `DP04_0058E` tells you nothing when looking at it first time, making it easy to mix up variables and hard for collaborators to follow your work
+- **Hidden missing values**: `NaN` means "no data" or null value. Left uncaught, it silently disrupts visualization
+- **Wrong data types**: the Census API returns everything as strings. Math on strings fails in Python
+- **Unreadable column names**: `DP04_0058E` tells you nothing when looking at it first time, making it easy to mix up variables and hard for collaborators to follow your work
 
 ::::::::::::::::::::::::::::::::::::: callout
  
@@ -47,7 +47,7 @@ Data scientists typically spend **60 to 80% of project time** on data preparatio
  
 After downloading ACS data via the Census API (see the previous lesson), the raw DataFrame needs several cleaning steps before it is ready for analysis or visualization. This section walks through each step using the file you saved in Part 1.
  
-### What We Are Working With ?
+### What We Are Working With
  
 Jump to **Part 3** of the notebook. The data was downloaded as a CSV from the Census API and loaded into a pandas DataFrame. At this stage it has some rough edges:
 
@@ -59,14 +59,14 @@ Jump to **Part 3** of the notebook. The data was downloaded as a CSV from the Ce
 
 :::::::::::::::::::::::::::::::::::::::::: challenge
 
-### **Prerequisites**- Completion of Part 1 and 2 of the Notebook.  
+### **Prerequisites**: Completion of Parts 1 and 2 of the Notebook  
 
 Work through the interactive Python notebook Part `3` and `4` linked below, which covers everything on this page hands-on inside Google Colab. More explanation on the process of data cleaning explained below!
  
 The hands-on work for this section:
  
-- **Part 3: Data Cleaning** - null value removal, shapefile join, county ranking, summary statistics
-- **Part 4: Visual Maps** - Bar charts, histogram, choropleth maps, and result interpretation
+- **Part 3: Data Cleaning**: null value removal, shapefile join, county ranking, summary statistics
+- **Part 4: Visual Maps**: bar charts, histogram, choropleth maps, and result interpretation
 
 ### <a href="https://colab.research.google.com/github/SpatialTurn/Workshop2026-SessionB/blob/main/episodes/CensusDATA_Introduction.ipynb" target="_blank">Open the Notebook in Google Colab.</a>
 
@@ -214,7 +214,7 @@ There are two modes you will use throughout this workshop:
 - **Explanatory visualization**: polished charts and maps you share with others to communicate findings
 
 
-### Why Visualization Matters for Census Data ?
+### Why Visualization Matters for Census Data
  
 Census datasets can have thousands of rows and dozens of columns. A 1,000-tract DataFrame is impossible to read directly. Visualization addresses this in a few key ways:
  
