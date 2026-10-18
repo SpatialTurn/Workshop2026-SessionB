@@ -6,7 +6,7 @@ title: "Setup"
 
 This workshop introduces Jupyter Notebook as a platform for data analysis using U.S. Census data as a practical case study. Participants will learn how to access, clean, analyze, and visualize data while understanding key Census concepts such as variables and geographic units.
 
-Designed for beginners, the session emphasizes hands-on learning and guides participants through a complete workflow, from data acquisition to interpretation. **Basic Python experience is required.**
+Designed for beginners, the session emphasizes hands-on learning and guides participants through a complete workflow, from data acquisition to interpretation. **No prior Python experience is needed**, although some familiarity helps.
 
 ---
 
@@ -15,11 +15,11 @@ Designed for beginners, the session emphasizes hands-on learning and guides part
 | Time | Session | Content | Activities |
 |------|---------|---------|------------|
 | 8:30 to 10:30 | *Breakfast Introductions* | - | - |
-| 10:30 to 12:30 | Notebook Basics | Introduction to Jupyter Notebook and Google Colab | Open notebook, run first code cell, create markdown notes. Use libraries, create variables, load sample data, include short exercise on how to play with data |
+| 10:30 to 12:30 | Python Notebook Introduction | Jupyter Notebook, Google Colab and the core Python libraries | Open notebook, run first code cell, create markdown notes. Use libraries, create variables, load sample data, include short exercise on how to play with data |
 | 12:30 to 1:15 | *Lunch Break* | - | - |
-| 1:15 to 2:45 | Python Libraries | Data Cleaning, ACS vs. Decennial Census; Modes of accessing data | Retrieve data, convert to DataFrame, Explore dataset structure, variables, tables, columns, and geographical units |
+| 1:15 to 2:45 | Acquiring and Exploring Census Data | ACS vs. Decennial Census; ways of accessing data, including the Census API | Retrieve data, convert to DataFrame, Explore dataset structure, variables, tables, columns, and geographical units |
 | 2:45 to 3:00 | *Coffee Break* | - | - |
-| 3:00 to 4:30 | Analyzing Census Data | Creating charts /maps of populations trends | Maps/Charts of population distribution, interpreting results |
+| 3:00 to 4:30 | Census Data Analysis with Python | Cleaning the data, then charts and maps of population patterns | Maps/Charts of population distribution, interpreting results |
 | 4:30 to 5:00 | *Group Discussion* | - | - |
 
 ---

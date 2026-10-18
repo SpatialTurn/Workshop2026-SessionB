@@ -25,9 +25,9 @@ Jupyter Notebooks are especially useful for:
 
 Instead of writing a script and running it all at once, you work in **small, executable blocks called cells**. An example of this would be using the **Notebook** feature in ArcGIS Pro Desktop. 
 
-![*Image Source: Markdown in a Jupyter notebook, Edlitera.*](notebookexample.png "Python Notebook Layout")
+![A Jupyter notebook with Markdown text cells, Python code cells and a table of output, each labeled with an arrow. Image source: Edlitera.](notebookexample.png "Python Notebook Layout")
 
-## 2. Why Data Scientists Use Python Notebooks ?
+## 2. Why Data Scientists Use Python Notebooks
 
 Python Notebooks support an **iterative workflow**:
 
@@ -45,7 +45,7 @@ Python Notebooks support an **iterative workflow**:
 - Reproducible analysis  
 - Simple sharing with collaborators  
 
-### An Example: A Plot I made a while Back. 
+### An Example: A Plot Made in a Notebook
 
 ![Average Temperatures and Snow Depth (mm) in Midwest since 2008.](exampleplot.png "A multivariate choropleth plot")
 
@@ -94,7 +94,7 @@ state_coords = {
 
 You can use Jupyter Notebooks in several ways, one such way is:
 
-- [Google Collab](https://colab.research.google.com). You would need a google account for this. Then create a new notebook in Drive. 
+- [Google Colab](https://colab.research.google.com). You need a Google account for this. Then create a new notebook in Drive. 
 
 ### Quick Start in Google Colab (easiest for beginners)
 
@@ -104,7 +104,7 @@ You can use Jupyter Notebooks in several ways, one such way is:
 
 ![Opening a New Notebook in Colab.](colabintro.png "Google Colab")
 
-#### Why Run this online ?
+#### Why Run This Online?
 
 - Ease of Usage and Free 
 - Colab runs in the cloud → you only need a Google account and internet 
@@ -133,7 +133,7 @@ Scroll down to find additional reading on python libraries and most commonly use
 
 **Note**: To SAVE your changes made, make sure to Save a copy of the above notebook in your Drive! 
 
-![](savecopy.png "Your Notebook")
+![The Colab File menu with "Save a copy in Drive" highlighted.](savecopy.png "Save a Copy in Drive")
 
 :::::::::::::::::::::::::::::::::::: challenge
 
@@ -175,7 +175,7 @@ import matplotlib.pyplot as plt
 ```
 The `as` keyword gives the library a shorter nickname: these aliases (`pd`, `np`, `plt`) are standard conventions you will see everywhere in data science code.
 
-### Why Libraries Matter ?
+### Why Libraries Matter
 
 Python on its own is a general-purpose language. Its real strength in data science comes from its ecosystem of libraries. A task that might take hundreds of lines of custom code (such as reading a CSV, computing statistics, and drawing a chart) can be done in fewer than ten lines when you use the right libraries.
 
